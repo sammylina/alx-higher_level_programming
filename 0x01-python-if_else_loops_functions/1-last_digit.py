@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 ld = number % 10
-msg = "last digit of {:d} is {:d} and is"
+msg = "Last digit of {:d} is {:d} and is"
 if (number < 0 and ld != 0):
     ld = -(10 - ld)
 if (ld > 5):
