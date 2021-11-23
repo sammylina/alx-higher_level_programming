@@ -11,6 +11,11 @@ int check_cycle(listint_t *list)
 {
 	listint_t *current_node, *previous_node;
 
+	if (!list)
+	{
+		return (0);
+	}
+
 	current_node = list->next;
 	previous_node = list;
 	while (current_node)
