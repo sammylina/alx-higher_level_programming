@@ -45,7 +45,7 @@ class Square:
         if type(position) is not tuple or len(position) != 2:
             print("position must be a tuple of 2 positive integers")
             return
-        for p in self.__position:
+        for p in position:
             if type(p) is not int or p < 0:
                 print("position must be a tuple of 2 positive integers")
                 return
