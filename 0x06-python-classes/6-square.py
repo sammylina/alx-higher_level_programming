@@ -46,7 +46,7 @@ class Square:
             print("position must be a tuple of 2 positive integers")
             return
         for p in self.__position:
-            if type(p) is not int or p !> 0:
+            if type(p) is not int or p < 0:
                 print("position must be a tuple of 2 positive integers")
                 return
         self.__position = position
