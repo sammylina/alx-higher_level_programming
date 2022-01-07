@@ -17,6 +17,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([4, 1, 3, 6, 4]), 6)
         self.assertEqual(max_integer([4]), 4)
         self.assertEqual(max_integer([2, 2, 2, 2]), 2)
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+        self.assertEqual(max_integer([3, -1, 2, 1]), 3)
+        self.assertEqual(max_integer([-5, -2, -4, -3]), -2)
 
     def test_value(self):
         """check when list is empity it returned None.
