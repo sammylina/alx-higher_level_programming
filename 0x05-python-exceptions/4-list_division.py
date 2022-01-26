@@ -9,7 +9,11 @@ def list_division(my_list_1, my_list_2, list_length):
                 division_list.append(result)
             except IndexError:
                 print('out or range')
-                raise
+                if len(division_list) == list_length:
+                    raise
+                else:
+                    division_list.append(0)
+                    continue
             except (ValueError, TypeError):
                 print('wrong type')
                 division_list.append(0)
