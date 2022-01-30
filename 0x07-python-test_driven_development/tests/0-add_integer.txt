@@ -1,0 +1,24 @@
+Add two integers
+    >>> add_integer = __import__("0-add_integer").add_integer
+    
+    usage: add_integer(a, b=98)
+   
+    a and b must be int or float type
+    >>> add_integer('5')
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(6, True)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    a and b must be first casted to integers if they are float
+    >>> add_integer(4.2, 9.3)
+    13
+
+    if second argument is not provided use 98
+    >>> add_integer(4)
+    102
+
+    >>> add_integer(23, 0)
+    23
