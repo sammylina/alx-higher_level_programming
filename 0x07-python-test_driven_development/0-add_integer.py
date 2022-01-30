@@ -1,5 +1,12 @@
 #!/usr/bin/python3
-"""Add module"""
+"""0-add_integer module
+
+   add two numbers and return their sum
+
+   Example: add_integer(4, 1)
+   => 5
+
+"""
 
 
 def add_integer(a, b=98):
