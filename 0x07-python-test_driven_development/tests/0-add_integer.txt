@@ -12,9 +12,30 @@ Add two integers
     Traceback (most recent call last):
     TypeError: b must be an integer
 
+    >>> add_integer([1,3], [])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(3, [3])
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer({'n': 3}, 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
     a and b must be first casted to integers if they are float
     >>> add_integer(4.2, 9.3)
     13
+
+    should add negative numbers
+    >>> add_integer(-2, -22)
+    -24
+
+    should add negative floating numbers
+    >>> add_integer(-5.2, -3.3)
+    -8
+
 
     if second argument is not provided use 98
     >>> add_integer(4)
