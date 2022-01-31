@@ -24,7 +24,7 @@ class Rectangle:
                 for w in range(self.__width):
                     print('#', end="")
                 print()
-            return "\033[F"
+            return "\033[F "
 
     @property
     def width(self):
