@@ -15,7 +15,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-    
+
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ''
