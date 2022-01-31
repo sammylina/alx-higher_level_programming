@@ -23,8 +23,9 @@ class Rectangle:
             for h in range(self.__height):
                 for w in range(self.__width):
                     print('#', end="")
-                print()
-            return "\033[F "
+                if h is not self.__height - 1:
+                    print()
+            return ""
 
     @property
     def width(self):
