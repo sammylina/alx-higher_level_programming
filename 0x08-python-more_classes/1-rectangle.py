@@ -30,6 +30,8 @@ class Rectangle:
         else:
             if value >= 0:
                 self.__width = value
+            else:
+                raise ValueError('width must >= 0')
 
     @height.setter
     def height(self, value):
@@ -38,3 +40,5 @@ class Rectangle:
         else:
             if value >= 0:
                 self.__height = value
+            else:
+                raise ValueError('height must >= 0')
