@@ -1,0 +1,33 @@
+Text indentation test cases
+    
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    Example: 
+        text_indentation("this text: must be a ? string.")
+    Output:
+        this text
+
+        must be a 
+
+        string
+
+    input text must be a string
+    >>> text_indentation(45)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(['hello', 'world'])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    should split the text using . and add 2 newline after it
+    should split the text using ? and add 2 newline after it
+    should split the text using : and add 2 newline after it
