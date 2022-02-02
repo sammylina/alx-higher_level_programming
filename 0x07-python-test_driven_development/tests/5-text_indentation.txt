@@ -29,5 +29,33 @@ Text indentation test cases
     TypeError: text must be a string
 
     should split the text using . and add 2 newline after it
+    >>> text_indentation("I love programming. What about")
+    I love programming.
+    <BLANKLINE>
+    What about
+
     should split the text using ? and add 2 newline after it
+    >>> text_indentation("do you have a question? No")
+    do you have a question?
+    <BLANKLINE>
+    No
+
     should split the text using : and add 2 newline after it
+    >>> text_indentation("the time is 3: 34")
+    the time is 3:
+    <BLANKLINE>
+    34
+
+    should split a string that contains . , ? and :
+    >>> text_indentation("me: what do you know? he: Nothing. want to say nothing. period")
+    me:
+    <BLANKLINE>
+    what do you know?
+    <BLANKLINE>
+    he:
+    <BLANKLINE>
+    Nothing.
+    <BLANKLINE>
+    want to say nothing.
+    <BLANKLINE>
+    period
