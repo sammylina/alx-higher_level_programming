@@ -32,7 +32,6 @@ Test cases for printing a square using #
 
     print empty square
     >>> print_square(0)
-    <BLANKLINE>
     
     size must be provided
     >>> print_square()
