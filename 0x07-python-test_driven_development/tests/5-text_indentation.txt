@@ -47,7 +47,7 @@ Text indentation test cases
     34
 
     should split a string that contains . , ? and :
-    >>> text_indentation("me: what do you know? he: Nothing. want to say nothing. period")
+    >>> text_indentation("me: what do you know? he Nothing. want to say nothing. period")
     me:
     <BLANKLINE>
     what do you know?
@@ -89,5 +89,6 @@ Text indentation test cases
     <BLANKLINE>
     Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-
-
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
