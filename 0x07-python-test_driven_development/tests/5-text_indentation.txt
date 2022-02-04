@@ -52,9 +52,7 @@ Text indentation test cases
     <BLANKLINE>
     what do you know?
     <BLANKLINE>
-    he:
-    <BLANKLINE>
-    Nothing.
+    he Nothing.
     <BLANKLINE>
     want to say nothing.
     <BLANKLINE>
