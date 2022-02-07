@@ -9,5 +9,10 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """initialize size with positive integer"""
+        super().integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
+
+    def area(self):
+        """calcaulate total are of the square"""
+        return self.__size * self.__size
