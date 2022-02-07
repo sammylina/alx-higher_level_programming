@@ -13,4 +13,4 @@ def is_kind_of_class(obj, a_class):
     Returns: True if obj is instance of a_class or one of its base
 
     """
-    return isinstance(obj, a_class)
+    return obj.__class__ == a_class or obj.__class__.__base__ == a_class
