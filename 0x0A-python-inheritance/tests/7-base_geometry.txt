@@ -42,6 +42,9 @@ Test cases for BaseGeometry class
         Traceback (most recent call last):
         TypeError: age must be an integer
 
+        >>> bg.integer_validator("age", [3, 2])
+        Traceback (most recent call last):
+        TypeError: age must be an integer
 
         if <= 0 raise value error
         >>> bg.integer_validator("age", 0)
