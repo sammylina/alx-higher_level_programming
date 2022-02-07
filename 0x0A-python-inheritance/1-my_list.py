@@ -17,7 +17,7 @@ class MyList(list):
 
     def print_sorted(self):
         """print the list in ascending order
-            
+
             Attributes:
                 copy (list): copy of the original list
         """
