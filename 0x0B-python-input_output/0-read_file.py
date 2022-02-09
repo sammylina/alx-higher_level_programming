@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """read file module"""
-import sys
 
 
 def read_file(filename=""):
@@ -11,4 +10,4 @@ def read_file(filename=""):
 
     """
     with open(filename, encoding='utf-8') as a_file:
-        sys.stdout.write(a_file.read())
+        print(a_file.read())
