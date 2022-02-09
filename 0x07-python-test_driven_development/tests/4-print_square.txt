@@ -1,0 +1,39 @@
+Test cases for printing a square using #
+    
+    >>> print_square = __import__('4-print_square').print_square
+
+    Usage example : 
+        print_squre(4)
+        => ####
+           ####
+           ####
+           ####
+
+    size must be an integer
+    >>> print_square('4')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    size must be >= 0
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    if size of float raise error
+    >>> print_square(4.3)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    print the square
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+    print empty square
+    >>> print_square(0)
+    
+    size must be provided
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'

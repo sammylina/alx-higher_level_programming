@@ -1,0 +1,92 @@
+Text indentation test cases
+    
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    Example: 
+        text_indentation("this text: must be a ? string.")
+    Output:
+        this text
+
+        must be a 
+
+        string
+
+    input text must be a string
+    >>> text_indentation(45)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(['hello', 'world'])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    should split the text using . and add 2 newline after it
+    >>> text_indentation("I love programming. What about")
+    I love programming.
+    <BLANKLINE>
+    What about
+
+    should split the text using ? and add 2 newline after it
+    >>> text_indentation("do you have a question? No")
+    do you have a question?
+    <BLANKLINE>
+    No
+
+    should split the text using : and add 2 newline after it
+    >>> text_indentation("the time is 3: 34")
+    the time is 3:
+    <BLANKLINE>
+    34
+
+    should split a string that contains . , ? and :
+    >>> text_indentation("me: what do you know? he Nothing. want to say nothing. period")
+    me:
+    <BLANKLINE>
+    what do you know?
+    <BLANKLINE>
+    he Nothing.
+    <BLANKLINE>
+    want to say nothing.
+    <BLANKLINE>
+    period
+
+    >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres""")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+    Non autem hoc:
+    <BLANKLINE>
+    igitur ne illud quidem.
+    <BLANKLINE>
+    Fortasse id optimum, sed ubi illud:
+    <BLANKLINE>
+    Plus semper voluptatis?
+    <BLANKLINE>
+    Teneo, inquit, finem illi videri nihil dolere.
+    <BLANKLINE>
+    Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+    <BLANKLINE>
+    Si id dicis, vicimus.
+    <BLANKLINE>
+    Inde sermone vario sex illa a Dipylo stadia confecimus.
+    <BLANKLINE>
+    Sin aliud quid voles, postea.
+    <BLANKLINE>
+    Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+    <BLANKLINE>
+    Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
