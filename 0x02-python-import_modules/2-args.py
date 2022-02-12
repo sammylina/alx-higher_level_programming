@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """2-args module prints back arguments passed in
 to the program"""
- 
+
 
 if __name__ == '__main__':
 
