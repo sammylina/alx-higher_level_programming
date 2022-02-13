@@ -3,16 +3,17 @@
 
 
 import unittest
-import Base
-   
+from models.base import Base
+
 
 class TestBase(unittest.TestCase):
-    """Test cases for Base class"""
+    """test cases for Base class"""
 
     def test_id_none(self):
-        base = Base()
-        self.assertIsNotNone(base.id)
-        self.assertNotEqual(base.id, 0)
-        self.assertEqual(base.id, 1)
+        b = Base()
+        self.assertIsNotNone(b.id)
+        self.assertNotEqual(b.id, 0)
+        self.assertEqual(b.id, 1)
 
-        
+
+
