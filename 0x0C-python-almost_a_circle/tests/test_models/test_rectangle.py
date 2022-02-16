@@ -54,3 +54,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.area(), 15)
         r = Rectangle(1, 1)
         self.assertEqual(r.area(), 1)
+
+    @unittest.skip('implement display rectangle test')
+    def test_display(self, mock_print):
+        r = Rectangle(3, 4)
+        self.assertEqual(r.display(), r_print)
+
+    @unittest.skip('implement print __str__ test')
+    def test_str_(self):
+        pass
