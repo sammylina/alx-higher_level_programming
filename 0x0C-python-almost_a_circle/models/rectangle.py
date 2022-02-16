@@ -31,8 +31,8 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        sf = "({:d}) {:d}/{:d} - {:d}/{:d}"
-        return sf.format(self.id, self.__x, self.__y,
+        sf = "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}"
+        return sf.format(self.__class__.__name__, self.id, self.__x, self.__y,
                          self.__width, self.__height)
 
     @property
