@@ -48,3 +48,9 @@ class TestRectangle(unittest.TestCase):
         b1 = Base()
         r2 = Rectangle(1, 2)
         self.assertEqual(b1.id + 1, r2.id)
+
+    def test_area(self):
+        r = Rectangle(3, 5)
+        self.assertEqual(r.area(), 15)
+        r = Rectangle(1, 1)
+        self.assertEqual(r.area(), 1)
