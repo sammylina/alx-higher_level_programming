@@ -103,3 +103,17 @@ class Rectangle(Base):
             for column in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        if len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id, self.width = args
+        elif len(args) == 3:
+            self.id, self.width, self.height = args
+        elif len(args) == 4:
+            self.id, self.width, self.height, self.x = args
+        elif len(args) == 5:
+            self.id, self.width, self.height, self.x, self.y = args
+        else:
+            raise Exception('not valid numbers of arguments')

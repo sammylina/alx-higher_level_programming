@@ -93,3 +93,22 @@ class TestRectangle(unittest.TestCase):
         r_str = "\n\n#\n#\n"
         r.display()
         self.assertEqual(mock_stdout.getvalue(), r_str)
+    
+    def test_update(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        #r_id, width, height, x, y = r.id, r.width, r.height, r.x, r.y
+        r.update(11, 12, 13, 14, 15)
+        self.assertEqual(r.id, 11)
+        self.assertEqual(r.width, 12)
+        self.assertEqual(r.height, 13)
+        self.assertEqual(r.x, 14)
+        self.assertEqual(r.y, 15)
+        
+    @unittest.skip("test for update with too many args")
+    def test_update_args_size(self):
+        r = Rectangle(1, 2)
+        with self.assertRaises('ArgumentError') as e:
+            r.update()
+        with self.assertRaises('ArgumentError') as e:
+            r.update(1, 2, 3, 4, 5, 6)
+
