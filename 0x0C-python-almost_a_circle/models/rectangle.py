@@ -105,6 +105,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args):
+        """update attributes of a rectangle"""
         if len(args) == 1:
             self.id = args[0]
         elif len(args) == 2:
