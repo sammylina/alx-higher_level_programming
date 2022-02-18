@@ -64,6 +64,9 @@ class TestRectangle(unittest.TestCase):
         r.display()
         self.assertEqual(mock_stdout.getvalue(), result)
 
-    @unittest.skip('implement print __str__ test')
     def test_str_(self):
-        pass
+        r = Rectangle(3, 4, 0, 0, 11)
+        r_str = '[Rectangle] (11) 0/0 - 3/4\n'
+        with patch('sys.stdout', new=io.StringIO()) as mock_stdout:
+            print(r)
+        self.assertEqual(mock_stdout.getvalue(), r_str)
