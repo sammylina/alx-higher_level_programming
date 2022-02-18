@@ -93,7 +93,13 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle using # """
+        x_indent, y_indent = '', ''
+        if self.__x or self.__y:
+            x_indent = " " * self.__x;
+            y_indent = "\n" * self.__y;
+        print(y_indent, end='')
         for row in range(self.__height):
+            print(x_indent, end="")
             for column in range(self.__width):
                 print("#", end="")
             print()

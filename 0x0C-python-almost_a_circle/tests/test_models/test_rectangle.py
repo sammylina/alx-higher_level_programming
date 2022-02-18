@@ -77,14 +77,19 @@ class TestRectangle(unittest.TestCase):
     def test_display_x_y(self, mock_stdout):
         r = Rectangle(2, 3, 1, 1)
         r_str = "\n ##\n ##\n ##\n"
+        r.display()
         self.assertEqual(mock_stdout.getvalue(), r_str)
 
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_display_x(self, mock_stdout):
         r = Rectangle(1, 2, 2)
         r_str = "  #\n  #\n"
+        r.display()
+        self.assertEqual(mock_stdout.getvalue(), r_str)
 
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_display_y(self, mock_stdout):
         r = Rectangle(1, 2, 0, 2)
         r_str = "\n\n#\n#\n"
+        r.display()
+        self.assertEqual(mock_stdout.getvalue(), r_str)
