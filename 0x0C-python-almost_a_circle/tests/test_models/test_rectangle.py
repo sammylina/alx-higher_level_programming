@@ -104,11 +104,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.x, 14)
         self.assertEqual(r.y, 15)
         
-    @unittest.skip("test for update with too many args")
     def test_update_args_size(self):
         r = Rectangle(1, 2)
-        with self.assertRaises('ArgumentError') as e:
+        with self.assertRaises(Exception):
             r.update()
-        with self.assertRaises('ArgumentError') as e:
+        with self.assertRaises(Exception):
             r.update(1, 2, 3, 4, 5, 6)
 
