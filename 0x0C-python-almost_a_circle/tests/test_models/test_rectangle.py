@@ -2,6 +2,8 @@
 """test_rectangle module"""
 
 import unittest
+from unittest.mock import patch
+import io
 from models.rectangle import Rectangle
 from models.base import Base
 
@@ -55,10 +57,12 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(1, 1)
         self.assertEqual(r.area(), 1)
 
-    @unittest.skip('implement display rectangle test')
-    def test_display(self, mock_print):
+    @patch('sys.stdout', new_callable=io.StringIO)
+    def test_display(self, mock_stdout):
         r = Rectangle(3, 4)
-        self.assertEqual(r.display(), r_print)
+        result = "###\n###\n###\n###\n"
+        r.display()
+        self.assertEqual(mock_stdout.getvalue(), result)
 
     @unittest.skip('implement print __str__ test')
     def test_str_(self):
