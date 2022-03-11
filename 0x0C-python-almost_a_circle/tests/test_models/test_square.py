@@ -26,13 +26,13 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.height, 5)
 
     def test_argument_validity(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square('size')
             Square(None)
             Square({"size": 4})
             Square((4,))
             Square([4])
-        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(0)
             Square(-1)
 
