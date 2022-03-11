@@ -40,3 +40,9 @@ class TestSquare(unittest.TestCase):
         s = Square(5, 0, 1, 55)
         output_str = "[Square] (55) 0/1 - 5"
         self.assertEqual(s.__str__(), output_str)
+
+    def test_size_setter(self):
+        s = Square(4)
+        s.size = 5
+        self.assertEqual(s.width, 5)
+        self.assertEqual(s.height, 5)
