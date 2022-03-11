@@ -96,7 +96,6 @@ class TestRectangle(unittest.TestCase):
     
     def test_update(self):
         r = Rectangle(1, 2, 3, 4, 5)
-        #r_id, width, height, x, y = r.id, r.width, r.height, r.x, r.y
         r.update(11, 12, 13, 14, 15)
         self.assertEqual(r.id, 11)
         self.assertEqual(r.width, 12)
@@ -107,7 +106,23 @@ class TestRectangle(unittest.TestCase):
     def test_update_args_size(self):
         r = Rectangle(1, 2)
         with self.assertRaises(Exception):
-            r.update()
-        with self.assertRaises(Exception):
             r.update(1, 2, 3, 4, 5, 6)
+    
+    def test_update_kwargs(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        r.update(1, id=8)
+        self.assertEqual(r.id, 1)
+        r.update(id= 1, height=5)
+        self.assertEqual(r.height, 5)
+        r.update(id= 1, height= 5, width= 8)
+        self.assertEqual(r.width, 8)
+        r.update(id= 1, height= 5, width= 5, x= 4)
+        self.assertEqual(r.x, 4)
+        r.update(id= 1, height= 5, width= 5, x= 4, y= 7)
+        self.assertEqual(r.y, 7)
+
+    def test_update_args_kwargs(self):
+        pass
+        
+    
 
