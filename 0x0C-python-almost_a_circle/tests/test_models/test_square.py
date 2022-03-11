@@ -22,20 +22,19 @@ class TestSquare(unittest.TestCase):
     def test_size(self):
         s = Square(5)
         self.assertEqual(s.width, s.height)
+        self.assertEqual(s.width, 5)
+        self.assertEqual(s.height, 5)
 
     def test_argument_validity(self):
-        with self.assertRaises(TypeError):
-            s = Square(False)
-        with self.assertRaises(TypeError):
-            s = Square(5, 'xvalue')
-        with self.assertRaises(TypeError):
-            s = Square(4, 0, 'yvalue')
-        with self.assertRaises(ValueError):
-            s = Square(0)
-        with self.assertRaises(ValueError):
-            s = Square(1, -1)
-        with self.assertRaises(ValueError):
-            s = Square(1, 3, -4)
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Square('size')
+            Square(None)
+            Square({"size": 4})
+            Square((4,))
+            Square([4])
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            Square(0)
+            Square(-1)
 
     def test__str__(self):
         s = Square(5, 0, 1, 55)

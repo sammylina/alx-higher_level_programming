@@ -28,10 +28,6 @@ class Square(Rectangle):
             y (int): default value 0
             id (int): unique identifier of the instance
         """
-        if type(size) is not int:
-            raise TypeError
-        if size <= 0:
-            raise ValueError
 
         super().__init__(size, size, x=x, y=y, id=id)
 
