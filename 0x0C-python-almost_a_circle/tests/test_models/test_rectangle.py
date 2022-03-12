@@ -121,8 +121,9 @@ class TestRectangle(unittest.TestCase):
         r.update(id= 1, height= 5, width= 5, x= 4, y= 7)
         self.assertEqual(r.y, 7)
 
-    def test_update_args_kwargs(self):
-        pass
-        
-    
-
+    def test_to_dictionary(self):
+        """test creating of new dict that represents the rectangle instance"""
+        r = Rectangle(3, 4, 50 ,80 , 100)
+        sample_dict = {'id': 100, 'width': 3, 'height': 4, 'x': 50, 'y': 80}
+        dic = r.to_dictionary()
+        self.assertEqual(dic, sample_dict)
