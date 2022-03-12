@@ -68,4 +68,3 @@ class Square(Rectangle):
         if not args and kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-
