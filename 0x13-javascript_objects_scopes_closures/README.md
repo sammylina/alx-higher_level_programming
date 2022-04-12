@@ -1,0 +1,1 @@
+## JavaScript scope and closure
