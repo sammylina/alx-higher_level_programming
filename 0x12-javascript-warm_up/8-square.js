@@ -2,7 +2,7 @@
 
 let arg = process.argv[2];
 
-if (!arg) {
+if (!arg || isNaN(parseInt(arg))) {
   console.log('Missing size');
 } else {
   arg = parseInt(arg);
