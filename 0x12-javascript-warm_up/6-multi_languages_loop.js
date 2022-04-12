@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 const langs = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
