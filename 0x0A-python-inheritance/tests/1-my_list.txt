@@ -1,6 +1,10 @@
 The my-list module
 ==================
 
+documentation check
+-------------------
+
+
 using print_sorted
 ------------------
 
@@ -18,18 +22,17 @@ sorted list
     >>> ml.append(3)
     >>> ml.print_sorted()
     [3, 3, 3]
-    >>> ml.clear()
 
 
     different values of list
 
+    >>> ml = MyList()
+    >>> ml.append(3)
     >>> ml.append(4)
     >>> ml.append(1)
-    >>> ml.append(3)
     >>> ml.append(-3)
     >>> ml.print_sorted()
     [-3, 1, 3, 4]
-    >>> ml.clear()
 
     reversely sorted list
 
@@ -39,33 +42,32 @@ sorted list
     >>> ml.append(2)
     >>> ml.print_sorted()
     [2, 3, 4]
-    >>> ml.clear()
 
     empty list
     
     >>> ml = MyList()
     >>> ml.print_sorted()
     []
-    >>> ml.clear()
 
     negative numbers
 
+    >>> ml = MyList()
     >>> ml.append(-4)
     >>> ml.append(-1)
     >>> ml.append(-5)
     >>> ml.print_sorted()
     [-5, -4, -1]
-    >>> ml.clear()
 
     single value only
 
+    >>> ml = MyList()
     >>> ml.append(4)
     >>> ml.print_sorted()
     [4]
-    >>> ml.clear()
 
     positive and negative values
 
+    >>> ml = MyList()
     >>> ml.append(1)
     >>> ml.append(0)
     >>> ml.append(-1)
@@ -73,13 +75,12 @@ sorted list
     >>> ml.append(-31)
     >>> ml.print_sorted()
     [-31, -1, 0, 1, 11]
-    >>> ml.clear()
 
     previously sorted values
 
+    >>> ml = MyList()
     >>> ml.append(1)
     >>> ml.append(2)
     >>> ml.append(3)
     >>> ml.print_sorted()
     [1, 2, 3]
-    >>> ml.clear()
