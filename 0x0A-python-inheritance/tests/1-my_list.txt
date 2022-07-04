@@ -9,24 +9,40 @@ sorted list
 
     >>> MyList = __import__('1-my_list').MyList
 
-    sort same values of list
+
+    same values of list
+
     >>> ml = MyList()
     >>> ml.append(3)
     >>> ml.append(3)
     >>> ml.append(3)
     >>> ml.print_sorted()
     [3, 3, 3]
+    >>> ml.clear()
 
-    sort different values of list
+
+    different values of list
+
     >>> ml.append(4)
     >>> ml.append(1)
+    >>> ml.append(3)
     >>> ml.print_sorted()
-    [1, 3, 3, 3, 4]
+    [1, 3, 4]
+    >>> ml.clear()
 
-    sort reversely sorted list
+    reversely sorted list
+
     >>> ml = MyList()
     >>> ml.append(4)
     >>> ml.append(3)
     >>> ml.append(2)
     >>> ml.print_sorted()
     [2, 3, 4]
+    >>> ml.clear()
+
+    empty list
+    
+    >>> ml.print_sorted()
+    []
+
+

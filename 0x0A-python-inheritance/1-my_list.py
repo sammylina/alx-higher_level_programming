@@ -12,5 +12,6 @@ class MyList(list):
     def print_sorted(self):
         """print all items of the list in sorted order
         """
-        copy = sorted(self)
+        copy = [*self]
+        copy.sort()
         print(copy)
