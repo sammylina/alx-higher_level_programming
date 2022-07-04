@@ -4,7 +4,7 @@
 
 
 class MyList(list):
-    """custom list object that extend the build-in
+    """custom list object that extend the built-in
     python list object
 
     """
@@ -12,6 +12,5 @@ class MyList(list):
     def print_sorted(self):
         """print all items of the list in sorted order
         """
-        copy = [*self]
-        copy.sort()
+        copy = sorted(self)
         print(copy)
