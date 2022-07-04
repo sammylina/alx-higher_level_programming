@@ -26,8 +26,9 @@ sorted list
     >>> ml.append(4)
     >>> ml.append(1)
     >>> ml.append(3)
+    >>> ml.append(-3)
     >>> ml.print_sorted()
-    [1, 3, 4]
+    [-3, 1, 3, 4]
     >>> ml.clear()
 
     reversely sorted list
@@ -44,5 +45,21 @@ sorted list
     
     >>> ml.print_sorted()
     []
+    >>> ml.clear()
+
+    negative numbers
+
+    >>> ml.append(-4)
+    >>> ml.append(-1)
+    >>> ml.append(-5)
+    >>> ml.print_sorted()
+    [-5, -4, -1]
+    >>> ml.clear()
+
+    single value only
+    >>> ml.append(0)
+    >>> ml.print_sorted()
+    [0]
+    >>> ml.clear()
 
 
