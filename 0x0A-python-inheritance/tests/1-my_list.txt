@@ -43,6 +43,7 @@ sorted list
 
     empty list
     
+    >>> ml = MyList()
     >>> ml.print_sorted()
     []
     >>> ml.clear()
