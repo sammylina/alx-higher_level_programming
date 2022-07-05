@@ -13,6 +13,17 @@ sorted list
 
     >>> MyList = __import__('1-my_list').MyList
 
+    return different list
+
+    >>> ml = MyList()
+    >>> ml.append(5)
+    >>> ml.append(1)
+    >>> ml.append(9)
+    >>> ml.print_sorted()
+    [1, 5, 9]
+    >>> ml
+    [5, 1, 9]
+
 
     same values of list
 
