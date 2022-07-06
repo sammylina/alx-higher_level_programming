@@ -6,13 +6,19 @@ base_geometry test module
 BaseGeometry is a class that defined area and integer_validator
 functions.
 
-    raise exception if arg(value) is not integer
+general test cases
 
     >>> bg = BG()
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
 
     >>> bg.integer_validator('num')
     Traceback (most recent call last):
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+raise exception if arg(value) is not integer
 
     >>> bg.integer_validator('num', 'five')
     Traceback (most recent call last):
@@ -43,7 +49,7 @@ functions.
     Traceback (most recent call last):
     TypeError: num must be an integer
 
-    raise exception if arg(value) is less or equal to 0
+raise exception if arg(value) is less or equal to 0
 
     >>> bg.integer_validator('num', 0)
     Traceback (most recent call last):
