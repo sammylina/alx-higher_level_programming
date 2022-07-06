@@ -1,0 +1,47 @@
+base_geometry test module
+=========================
+
+    >>> BG = __import__('7-base_geometry').BaseGeometry
+    
+BaseGeometry is a class that defined area and integer_validator
+functions.
+
+    raise exception if arg(value) is not integer
+
+    >>> bg = BG()
+    >>> bg.integer_validator('num', 'five')
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+    >>> bg.integer_validator('num', False)
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+    >>> bg.integer_validator('num', {'num': 23})
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+
+    >>> bg.integer_validator('num', [1, 4])
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+    
+    >>> bg.integer_validator('num', (1, 9))
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+    >>> bg.integer_validator('num', None)
+    Traceback (most recent call last):
+    TypeError: num must be an integer
+
+
+    raise exception if arg(value) is less or equal to 0
+
+    >>> bg.integer_validator('num', 0)
+    Traceback (most recent call last):
+    ValueError: num must be greater than 0
+
+    >>> bg.integer_validator('num', -2)
+    Traceback (most recent call last):
+    ValueError: num must be greater than 0
+    
