@@ -3,4 +3,8 @@
 const first = parseInt(process.argv[2]);
 const second = parseInt(process.argv[3]);
 
-console.log(first + second);
+function add (first, second) {
+  console.log(first + second);
+}
+
+add(first, second);
