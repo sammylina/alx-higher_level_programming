@@ -9,7 +9,7 @@ if __name__ == '__main__':
     db = driver.connect(host='localhost', port=3306, user=user, passwd=passwd, db=db)
 
     cur = db.cursor()
-    cur.execute('select * from states where name like \'N%\'')
+    cur.execute("select * from states where name like 'N%' order by id asc")
 
     for r in cur.fetchall():
         print(r)
