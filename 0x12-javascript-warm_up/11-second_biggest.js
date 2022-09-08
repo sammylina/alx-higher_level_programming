@@ -12,6 +12,8 @@ if (nums.length > 1) {
       firstBig = n;
     } else if (n > secondBig && n < firstBig) {
       secondBig = n;
+    } else if (firstBig === secondBig) {
+      secondBig = n;
     }
   });
   console.log(secondBig);
