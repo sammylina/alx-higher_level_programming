@@ -6,7 +6,8 @@ if __name__ == '__main__':
     import MySQLdb as driver
 
     user, passwd, db = sys.argv[1:]
-    db = driver.connect(host='localhost', port=3306, user=user, passwd=passwd, db=db)
+    db = driver.connect(host='localhost', port=3306,
+                        user=user, passwd=passwd, db=db)
     cur = db.cursor()
 
     cur.execute('select * from states order by states.id asc')
@@ -17,4 +18,3 @@ if __name__ == '__main__':
 
     cur.close()
     db.close()
-
