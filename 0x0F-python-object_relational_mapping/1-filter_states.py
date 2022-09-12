@@ -10,7 +10,8 @@ if __name__ == '__main__':
                         user=user, passwd=passwd, db=db)
 
     cur = db.cursor()
-    cur.execute("select * from states where name like binary 'N%' order by id asc")
+    cur.execute("select * from states where name \
+                like binary 'N%' order by id asc")
 
     for r in cur.fetchall():
         print(r)
