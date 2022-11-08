@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-"""Find peak value
+"""Find peak module
 """
 
 
 def find_peak(int_list):
-    """Find the peak value in the list
+    """Find any peak value in the list
     """
     if len(int_list) == 0:
         return None
+    if len(int_list) == 1:
+        return int_list[0]
     else:
-        peak = int_list[0]
-        for elem in int_list[1:]:
-            if elem > peak:
-                peak = elem
-        return peak
+        s = (len(int_list) // 2)
+        if int_list[s] >= int_list[s-1] and int_list[s] >= int_list[s+1]:
+            return int_list[s]
+        else:
+            return find_peak(int_list[s:])
