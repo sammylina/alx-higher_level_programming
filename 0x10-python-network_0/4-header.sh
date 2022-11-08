@@ -1,0 +1,3 @@
+#!/bin/bash
+#add custom http header to the request
+curl -L -H 'X-School-User-Id: 98' "$1"
