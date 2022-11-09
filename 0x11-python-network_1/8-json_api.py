@@ -18,4 +18,4 @@ if __name__ == '__main__':
         else:
             print('[{}] {}'.format(user.get('id'), user.get('name')))
     except Exception as e:
-        print("Not a vaild JSON")
+        print("Not a valid JSON")
