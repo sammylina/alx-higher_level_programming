@@ -13,6 +13,6 @@ if __name__ == '__main__':
     req_obj = request.Request(url)
     try:
         with request.urlopen(req_obj) as res:
-            print(res.read())
+            print(res.read().decode('utf8'))
     except HTTPError as err:
-        print("Error code: ", err.code)
+        print("Error code:", err.code)
