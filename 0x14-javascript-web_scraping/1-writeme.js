@@ -4,10 +4,10 @@ const fs = require('fs');
 
 const [filepath, message] = process.argv.slice(2, 4);
 
-fs.writeFile(filepath, message, { encoding: 'utf8', flag: 'w+' }, (err, data) => {
+fs.writeFile(filepath, message, { encoding: 'utf8', flag: 'w+' }, (err) => {
   if (err) {
     console.log(err);
   } else {
-    console.log(data);
+    console.log(message);
   }
 });
