@@ -1,6 +1,12 @@
-#!/home/eyuel/.nvm/versions/node/v16.13.2/bin/node
+#!/usr/bin/node
 
-const fs = require('fs')
-const filename = process.argv[2]
+const fs = require('fs');
+const filename = process.argv[2];
 
-
+fs.readFile(filename, 'utf8', (err, data) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
